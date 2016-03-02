@@ -1,0 +1,73 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+
+group ="com.tdu"
+version = "1.0.0"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+	
+[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+  
+repositories {
+   mavenLocal()
+   mavenCentral()
+}
+eclipse{
+	jdt{
+		sourceCompatibility = 1.7
+		targetCompatibility = 1.7
+	}
+}
+
+subprojects{
+	apply plugin: "java"
+	apply plugin: "eclipse"
+	
+	group ="com.tdu"
+	version = "1.0.0"
+	
+	sourceCompatibility = 1.7
+	targetCompatibility = 1.7
+		
+	[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+	  
+    repositories {
+	   mavenLocal()
+       mavenCentral()
+    }
+    eclipse{
+		jdt{
+			sourceCompatibility = 1.7
+			targetCompatibility = 1.7
+		}
+	}
+}
+
+dependencies {
+	compile (
+		"org.springframework.boot:spring-boot-starter:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-autoconfigure:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-starter-test:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-starter-jdbc:${spring_boot_version}",
+		"junit:junit:${junit_version}",
+		"com.github.sgroschupf:zkclient:${zkclient_version}"
+	)
+	compile ("com.alibaba:dubbo:${dubbo_version}"){
+		exclude(module: 'spring')
+	}
+	compile (
+		project(":springboot-dubbo-api")
+	)
+}
+
+task sourceJar (type : Jar) {
+	classifier = "sources"
+	from sourceSets.main.allSource
+}
+
+task javadocJar (type: Jar, dependsOn: javadoc) {
+	classifier = "javadoc"
+	from javadoc.destinationDir
+}
+

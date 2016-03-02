@@ -1,0 +1,6 @@
+
+dependencies {
+	compile ("com.alibaba:dubbo:${dubbo_version}"){
+		exclude(module: 'spring')
+	}
+}
