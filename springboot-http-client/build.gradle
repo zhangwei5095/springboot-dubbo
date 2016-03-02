@@ -1,0 +1,35 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+
+group ="com.tdu"
+version = "1.0.0"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+	
+[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+  
+repositories {
+   mavenLocal()
+   mavenCentral()
+}
+eclipse{
+	jdt{
+		sourceCompatibility = 1.7
+		targetCompatibility = 1.7
+	}
+}
+
+dependencies {
+	compile (
+		"org.springframework.boot:spring-boot-starter:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-autoconfigure:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-starter-test:${spring_boot_version}",
+		"org.springframework.boot:spring-boot-starter-jdbc:${spring_boot_version}",
+		"junit:junit:${junit_version}",
+		"org.apache.httpcomponents:httpclient:${httpclient_version}",
+		"org.apache.httpcomponents:fluent-hc:${httpclient_version}"
+	)
+}
+
+
