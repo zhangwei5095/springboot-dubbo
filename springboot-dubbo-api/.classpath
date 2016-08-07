@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
-	<classpathentry kind="output" path="bin"/>
-	<classpathentry sourcepath="/Users/tangdu/.gradle/caches/modules-2/files-2.1/com.alibaba/dubbo/2.5.3/a5e0f9ea1927ec3d524774e20b679682ab09cfbb/dubbo-2.5.3-sources.jar" kind="lib" path="/Users/tangdu/.gradle/caches/modules-2/files-2.1/com.alibaba/dubbo/2.5.3/2e1ff426ec0f9457f69ab50a9821f2506ff18967/dubbo-2.5.3.jar" exported="true"/>
-	<classpathentry sourcepath="/Users/tangdu/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.15.0-GA/24e165af184887051239ff53425a70734c46db52/javassist-3.15.0-GA-sources.jar" kind="lib" path="/Users/tangdu/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.15.0-GA/79907309ca4bb4e5e51d4086cc4179b2611358d7/javassist-3.15.0-GA.jar" exported="true"/>
-	<classpathentry sourcepath="/Users/tangdu/.gradle/caches/modules-2/files-2.1/org.jboss.netty/netty/3.2.5.Final/9582286c1c9b201729668911d9f1b7589f77e27a/netty-3.2.5.Final-sources.jar" kind="lib" path="/Users/tangdu/.gradle/caches/modules-2/files-2.1/org.jboss.netty/netty/3.2.5.Final/60f6ce4af55b0fcd54dd6522cbf588de0387e2f5/netty-3.2.5.Final.jar" exported="true"/>
-</classpath>
